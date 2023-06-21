@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+#root {
+  padding: 0;
+  background-color: rgb(249, 250, 254);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: rgb(249, 250, 254);
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.notification__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  max-width: 685px;
+  height: auto;
+  padding: 1rem 1.5rem;
+  background-color: var(--White);
+  color: var(--Very-dark-blue);
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 20px 0px var(--Light-grayish-blue-2);
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card__header h2 span {
+  background-color: var(--Blue);
+  padding: 5px 18px;
+  margin-left: 10px;
+  border-radius: 20%;
+  color: var(--White);
+}
+
+.card__header button {
+  background-color: var(--White);
+  color: var(--Grayish-blue);
+  border: none;
+  padding: 0;
+}
+
+.card__header button:hover {
+  border: none;
+  color: var(--Blue);
+}
+
+/* Notification.tsx */
+
+.notification {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  border-radius: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.unread {
+  background-color: var(--Very-light-grayish-blue);
+}
+
+.notification .profileImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: auto;
+  padding: 10px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.picture_container {
+  display: flex;
+  justify-content: space-between;
+}
+.notification__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.picture__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notification__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notification__wrapper img {
+  border-radius: 0;
+}
+
+.notification__content #time {
+  font-size: 16px;
+  color: var(--Grayish-blue);
+}
+
+.notification__content p {
+  color: var(--Dark-grayish-blue);
+}
+
+.notification__content p #name {
+  font-weight: 800;
+  color: var(--Very-dark-blue);
+}
+
+.notification__content p #name:hover {
+  color: var(--Blue);
+}
+
+.notification__content p #reference {
+  font-weight: 800;
+  color: var(--Dark-grayish-blue);
+}
+
+.notification__content p #reference:hover {
+  color: var(--Blue);
+}
+
+.notification__content p #unread-icon {
+  height: 10px;
+  width: auto;
+  margin-left: 0.2rem;
+}
+
+.notification__content #message {
+  border: 1px solid var(--Light-grayish-blue-2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.notification__content #message:hover {
+  cursor: pointer;
+  background-color: var(--Light-grayish-blue-1);
+}
+
+@media screen and (width <= 685px) {
+  .notification__card {
+    border-radius: 0;
+  }
+}
